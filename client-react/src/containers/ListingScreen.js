@@ -7,24 +7,7 @@ const ListingScreen = () => {
 
   const dataList = useSelector((state) => state.data);
   const dispatch = useDispatch();
-  // const response = async () => {
-  //   await fetch(`${process.env.REACT_APP_API_URL}/api`, {
-  //     headers: {
-  //       validatehead: "Samplepgm"
-  //     }
-  //   }).then(res => {
-  //     if (res.ok) {
-  //       return res.json()
-  //     }
-  //     throw Error("Invalid Request")
-  //   }).then(data => {
-  //     dispatch(setData(data));
-  //   }).catch(error => {
-  //     console.log(error);
-  //   })
-  // }
   useEffect(() => {
-    // response();
     dispatch(fetchData())
   }, []);
 

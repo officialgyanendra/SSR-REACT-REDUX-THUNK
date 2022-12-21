@@ -11,9 +11,9 @@ export const fetchData = () => async (dispatch) => {
 
 export const fetchSelectedDetails = (id) => async (dispatch) => {
     fetchingData.get(`/api/details/${id}`)
-    .then((res)=>{
-        dispatch({type: ActionTypes.SELECTED_DETAIL, payload: res.data})
-    })
+        .then((res) => {
+            dispatch({ type: ActionTypes.SELECTED_DETAIL, payload: res.data })
+        })
 }
 
 export const setData = (allData) => {

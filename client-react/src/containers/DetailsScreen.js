@@ -7,28 +7,8 @@ const DetailsScreen = () => {
     const { id } = useParams();
     const dispatch = useDispatch();
     const details = useSelector((state) => state);
-    // const response = async () => {
-    //     await fetch(`${process.env.REACT_APP_API_URL}/api/details/${id}`, {
-    //         headers: {
-    //             validatehead: "Samplepgm"
-    //         }
-    //     }).then(res => {
-    //         if (res.ok) {
-    //             return res.json()
-    //         }
-    //         throw Error("No Data Found")
-    //     }).then(data => {
-    //         dispatch(selectedDetail(data))
-    //     }).catch(error => {
-    //         console.log(error)
-    //     })
-    // }
     useEffect(() => {
-        // response();
         if (id && id !== " ") dispatch(fetchSelectedDetails(id))
-        // return () => {
-        //     dispatch(RemoveSelectedDetail());
-        // }
     }, [id])
     if (details.selectedData !== undefined) {
         return (
